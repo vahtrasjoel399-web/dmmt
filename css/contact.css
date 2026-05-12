@@ -121,7 +121,8 @@ a.contact-card__value:hover { color: var(--accent); }
 
 .form-error { font-size: .75rem; color: var(--accent); min-height: 16px; display: block; }
 
-.form-submit { align-self: flex-start; margin-top: 4px; }
+.form-submit { align-self: stretch; margin-top: 4px; }
+@media (min-width: 480px) { .form-submit { align-self: flex-start; } }
 
 /* ── Success state ── */
 .form-success {

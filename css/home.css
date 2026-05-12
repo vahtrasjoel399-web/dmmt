@@ -30,8 +30,19 @@
 
 .hero__content {
   position: relative; z-index: 1;
-  padding: 60px 0 80px;
+  padding-top: 60px;
+  padding-bottom: 80px;
   width: 100%;
+}
+
+/* Mobile: align to top so there's no giant empty space above content */
+@media (max-width: 640px) {
+  .hero {
+    align-items: flex-start;
+    min-height: calc(100svh - var(--nav-h));
+    min-height: calc(100vh  - var(--nav-h));
+  }
+  .hero__content { padding-top: 36px; padding-bottom: 56px; }
 }
 
 .hero__title {

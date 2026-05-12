@@ -7,20 +7,27 @@ window.addEventListener('scroll', () => {
 }, { passive: true });
 
 /* ════════════════════════════════════
-   NAVBAR — mobile burger
+   NAVBAR — mobile burger + drawer
 ════════════════════════════════════ */
 const burger = document.querySelector('.navbar__burger');
 const menu   = document.querySelector('.navbar__menu');
 
+// Inject backdrop element once
+const backdrop = document.createElement('div');
+backdrop.className = 'navbar__backdrop';
+document.body.appendChild(backdrop);
+
 function closeMenu() {
   burger?.classList.remove('open');
   menu?.classList.remove('open');
+  backdrop.classList.remove('open');
   document.body.style.overflow = '';
 }
 
 burger?.addEventListener('click', () => {
   const open = burger.classList.toggle('open');
   menu.classList.toggle('open', open);
+  backdrop.classList.toggle('open', open);
   document.body.style.overflow = open ? 'hidden' : '';
 });
 
@@ -29,9 +36,12 @@ document.querySelectorAll('.navbar__link, .navbar__cta').forEach(el => {
   el.addEventListener('click', closeMenu);
 });
 
-// Close on outside tap
-document.addEventListener('click', e => {
-  if (menu?.classList.contains('open') && !navbar.contains(e.target)) closeMenu();
+// Close on backdrop tap
+backdrop.addEventListener('click', closeMenu);
+
+// Close on Escape key
+document.addEventListener('keydown', e => {
+  if (e.key === 'Escape' && menu?.classList.contains('open')) closeMenu();
 });
 
 /* ════════════════════════════════════

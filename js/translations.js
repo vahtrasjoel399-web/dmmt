@@ -182,6 +182,7 @@ const translations = {
     priv_contact_body: 'Küsimuste korral võtke meiega ühendust:',
 
     // Cookie banner
+    cookie_title: 'Kasutame küpsiseid',
     cookie_desc: 'Kasutame küpsiseid veebisaidi töö parandamiseks, analüütika ja personaliseerimise jaoks. Saate kõik küpsised vastu võtta või seadistada oma eelistused.',
     cookie_accept: 'Nõustun kõigiga',
     cookie_decline: 'Keeldun',
@@ -364,6 +365,7 @@ const translations = {
     priv_contact_body: 'For any questions, please contact us at:',
 
     // Cookie banner
+    cookie_title: 'We use cookies',
     cookie_desc: 'We use cookies to improve site performance, analytics, and personalisation. You can accept all cookies or customise your preferences.',
     cookie_accept: 'Accept all',
     cookie_decline: 'Decline',
@@ -546,6 +548,7 @@ const translations = {
     priv_contact_body: 'По любым вопросам обращайтесь к нам:',
 
     // Cookie banner
+    cookie_title: 'Мы используем cookies',
     cookie_desc: 'Мы используем cookies для улучшения работы сайта, аналитики и персонализации. Вы можете принять все cookies или настроить свои предпочтения.',
     cookie_accept: 'Принять все',
     cookie_decline: 'Отклонить',

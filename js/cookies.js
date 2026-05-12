@@ -52,6 +52,7 @@
     banner.innerHTML =
       '<div class="cb__inner">' +
         '<div class="cb__text">' +
+          '<span class="cb__title">' + t('cookie_title') + '</span>' +
           '<p class="cb__desc">' + t('cookie_desc') + '</p>' +
           '<a href="privacy.html" class="cb__privacy">' + t('cookie_privacy_link') + '</a>' +
         '</div>' +
