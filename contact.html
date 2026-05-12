@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="et">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Kontakt — DMMT STAFF</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/contact.css" />
+  <link rel="stylesheet" href="css/cookies.css" />
+</head>
+<body>
+
+  <header class="navbar">
+    <div class="navbar__inner container">
+      <a href="index.html" class="navbar__logo">
+        <span class="dm">DMMT</span><span class="staff">STAFF</span>
+      </a>
+      <nav class="navbar__menu">
+        <a href="index.html"    class="navbar__link" data-i18n="nav_home">Avaleht</a>
+        <a href="about.html"    class="navbar__link" data-i18n="nav_about">Meist</a>
+        <a href="services.html" class="navbar__link" data-i18n="nav_services">Teenused</a>
+        <a href="contact.html"  class="navbar__link" data-i18n="nav_contact">Kontakt</a>
+        <div class="lang-switcher">
+          <button class="lang-btn" data-lang="est">EST</button>
+          <button class="lang-btn" data-lang="eng">ENG</button>
+          <button class="lang-btn" data-lang="rus">RUS</button>
+        </div>
+        <a href="contact.html" class="btn btn-primary navbar__cta" data-i18n="nav_cta">Võta ühendust</a>
+      </nav>
+      <button class="navbar__burger" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <main>
+
+    <section class="page-hero">
+      <div class="page-hero__content container">
+        <span class="label fade-up" data-i18n="contact_hero_label">Võtke ühendust</span>
+        <h1 class="page-hero__title fade-up d1" data-i18n="contact_hero_title">Kontakt</h1>
+        <p class="page-hero__desc fade-up d2" data-i18n="contact_hero_desc">
+          Valmis arutama teie tööjõuvajadusi? Oleme avatud koostööks ja vastame kiiresti.
+        </p>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container contact-grid">
+
+        <!-- Info -->
+        <div class="contact-info">
+          <h2 class="contact-info__title" data-i18n="contact_info_title">Võtke meiega otse ühendust</h2>
+          <p class="contact-info__sub" data-i18n="contact_info_sub">
+            Meie peakorter asub Tallinnas, Eestis, ja töötame ettevõtetega üle Balti ja Skandinaavia turgude.
+          </p>
+
+          <div class="contact-cards">
+            <div class="contact-card">
+              <div class="contact-card__icon">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.6 1.18h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.78a16 16 0 0 0 5.67 5.67l1.67-1.67a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7a2 2 0 0 1 1.72 2.09z"/></svg>
+              </div>
+              <div class="contact-card__text">
+                <span class="contact-card__label" data-i18n="label_phone">Telefon</span>
+                <a href="tel:+37256626984" class="contact-card__value">+372 5662 6984</a>
+              </div>
+            </div>
+            <div class="contact-card">
+              <div class="contact-card__icon">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+              </div>
+              <div class="contact-card__text">
+                <span class="contact-card__label" data-i18n="label_email">E-post</span>
+                <a href="mailto:info@dalex.ee" class="contact-card__value">info@dalex.ee</a>
+              </div>
+            </div>
+            <div class="contact-card">
+              <div class="contact-card__icon">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>
+              </div>
+              <div class="contact-card__text">
+                <span class="contact-card__label" data-i18n="label_location">Asukoht</span>
+                <span class="contact-card__value">Tallinn, Estonia</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="contact-note">
+            <span class="contact-note__dot"></span>
+            <p data-i18n="contact_note">Vastame tavaliselt 24 töötunn jooksul.</p>
+          </div>
+        </div>
+
+        <!-- Form -->
+        <div class="contact-form-wrap">
+          <form id="contactForm" class="contact-form" novalidate>
+
+            <div class="form-row">
+              <div class="form-group">
+                <label for="name" class="form-label" data-i18n="form_name_label">Täisnimi *</label>
+                <input id="name" name="name" type="text" class="form-input"
+                  data-i18n-ph="form_name_ph" placeholder="Jaan Tamm" />
+                <span class="form-error" id="err-name"></span>
+              </div>
+              <div class="form-group">
+                <label for="company" class="form-label" data-i18n="form_company_label">Ettevõte</label>
+                <input id="company" name="company" type="text" class="form-input"
+                  data-i18n-ph="form_company_ph" placeholder="Teie ettevõtte nimi" />
+              </div>
+            </div>
+
+            <div class="form-row">
+              <div class="form-group">
+                <label for="email" class="form-label" data-i18n="form_email_label">E-posti aadress *</label>
+                <input id="email" name="email" type="email" class="form-input"
+                  data-i18n-ph="form_email_ph" placeholder="teie@ettevote.ee" />
+                <span class="form-error" id="err-email"></span>
+              </div>
+              <div class="form-group">
+                <label for="phone" class="form-label" data-i18n="form_phone_label">Telefon</label>
+                <input id="phone" name="phone" type="tel" class="form-input" placeholder="+372 …" />
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="service" class="form-label" data-i18n="form_service_label">Huvipakkuv teenus</label>
+              <select id="service" name="service" class="form-input form-select">
+                <option value="" data-i18n="form_svc_default">Valige teenus…</option>
+                <option value="recruitment"   data-i18n="form_svc1">Värbamine</option>
+                <option value="outsourcing"   data-i18n="form_svc2">Töötajate allhange</option>
+                <option value="construction"  data-i18n="form_svc3">Ehituse töötajad</option>
+                <option value="manufacturing" data-i18n="form_svc4">Tootmise töötajad</option>
+                <option value="logistics"     data-i18n="form_svc5">Logistika töötajad</option>
+                <option value="other"         data-i18n="form_svc6">Muu / Üldine päring</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label for="message" class="form-label" data-i18n="form_message_label">Sõnum *</label>
+              <textarea id="message" name="message" class="form-input form-textarea" rows="5"
+                data-i18n-ph="form_msg_ph" placeholder="Rääkige meile oma tööjõuvajadustest…"></textarea>
+              <span class="form-error" id="err-message"></span>
+            </div>
+
+            <button type="submit" class="btn btn-primary form-submit" data-i18n="form_submit">
+              Saada sõnum →
+            </button>
+          </form>
+
+          <div id="formSuccess" class="form-success" style="display:none">
+            <div class="form-success__icon">✓</div>
+            <h3 class="form-success__title" data-i18n="success_title">Sõnum vastu võetud</h3>
+            <p class="form-success__desc" data-i18n="success_desc">
+              Täname, et võtsite meiega ühendust. Vaatame teie sõnumi läbi ja võtame teiega peagi ühendust.
+            </p>
+            <button id="resetForm" class="btn btn-outline" data-i18n="success_btn">Saada uus sõnum</button>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="footer">
+    <div class="footer__inner container">
+      <div class="footer__brand">
+        <a href="index.html" class="footer__logo"><span class="dm">DMMT</span><span class="staff">STAFF</span></a>
+        <p class="footer__tagline" data-i18n-html="footer_tagline">Tööjõulahendused Balti ja<br>Skandinaavia turgudele.</p>
+      </div>
+      <div class="footer__nav-col">
+        <span class="footer__col-title" data-i18n="footer_nav_title">Navigatsioon</span>
+        <a href="index.html"    class="footer__nav-link" data-i18n="nav_home">Avaleht</a>
+        <a href="about.html"    class="footer__nav-link" data-i18n="nav_about">Meist</a>
+        <a href="services.html" class="footer__nav-link" data-i18n="nav_services">Teenused</a>
+        <a href="contact.html"  class="footer__nav-link" data-i18n="nav_contact">Kontakt</a>
+      </div>
+      <div class="footer__contact-col">
+        <span class="footer__col-title" data-i18n="footer_contact_title">Kontakt</span>
+        <a href="tel:+37256626984"     class="footer__contact-link">+372 5662 6984</a>
+        <a href="mailto:info@dalex.ee" class="footer__contact-link">info@dalex.ee</a>
+        <span class="footer__contact-link footer__contact-plain">Tallinn, Estonia</span>
+      </div>
+    </div>
+    <div class="footer__bottom container">
+      <span class="footer__copy" data-i18n="footer_copy">© 2025 DMMT STAFF. Kõik õigused kaitstud.</span>
+      <a href="privacy.html" class="footer__legal-link" data-i18n="nav_privacy">Privaatsuspoliitika</a>
+    </div>
+  </footer>
+
+  <script src="js/translations.js"></script>
+  <script src="js/main.js"></script>
+  <script src="js/cookies.js"></script>
+</body>
+</html>

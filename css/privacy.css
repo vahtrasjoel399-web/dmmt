@@ -1,0 +1,93 @@
+/* ── Privacy Policy ────────────────────────────────────────── */
+
+.priv-wrap {
+  max-width: 760px;
+  padding-top: 8px;
+  padding-bottom: 80px;
+}
+
+.priv-updated {
+  font-size: .8rem;
+  color: var(--text-muted);
+  letter-spacing: .04em;
+  text-transform: uppercase;
+  margin-bottom: 48px;
+}
+
+/* Section blocks */
+.priv-section {
+  border-left: 2px solid var(--border);
+  padding: 0 0 0 24px;
+  margin-bottom: 40px;
+  transition: border-color var(--ease);
+}
+
+.priv-section:hover {
+  border-color: var(--accent);
+}
+
+.priv-section__title {
+  font-size: clamp(1rem, 2vw, 1.15rem);
+  font-weight: 600;
+  color: var(--text);
+  margin-bottom: 10px;
+  line-height: 1.4;
+}
+
+.priv-section__body {
+  font-size: .95rem;
+  color: var(--text-muted);
+  line-height: 1.75;
+}
+
+/* Contact block */
+.priv-contact {
+  margin-top: 56px;
+  padding: 32px;
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  background: rgba(255,255,255,.02);
+  transition: border-color var(--ease), background var(--ease);
+}
+
+.priv-contact:hover {
+  border-color: rgba(255,42,42,.3);
+  background: rgba(255,42,42,.03);
+}
+
+.priv-contact__title {
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--text);
+  margin-bottom: 8px;
+}
+
+.priv-contact__body {
+  font-size: .9rem;
+  color: var(--text-muted);
+  margin-bottom: 16px;
+}
+
+.priv-contact__links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.priv-contact__link {
+  font-size: .9rem;
+  font-weight: 500;
+  color: var(--accent);
+  text-decoration: none;
+  transition: opacity var(--ease);
+}
+
+.priv-contact__link:hover {
+  opacity: .75;
+}
+
+@media (min-width: 480px) {
+  .priv-section {
+    padding-left: 32px;
+  }
+}
