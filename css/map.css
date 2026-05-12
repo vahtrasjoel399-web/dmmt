@@ -1,0 +1,40 @@
+/* ── Hero Globe ─────────────────────────────────────────────── */
+
+.hero-map {
+  display: none;
+  position: absolute;
+  right: 2%;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 460px;
+  max-width: 48%;
+  pointer-events: none;
+  z-index: 0;
+  opacity: 0;
+  animation: mapIn 1.2s var(--ease) 0.3s both;
+}
+
+@media (min-width: 1024px) {
+  .hero-map { display: block; }
+}
+
+@keyframes mapIn {
+  from { opacity: 0; transform: translateY(-50%) translateX(24px); }
+  to   { opacity: 1; transform: translateY(-50%) translateX(0);    }
+}
+
+.hero-map canvas {
+  display: block;
+  width: 460px;
+  height: 460px;
+  max-width: 100%;
+}
+
+/* ── Reduced motion ─────────────────────────────────────────── */
+@media (prefers-reduced-motion: reduce) {
+  .hero-map {
+    animation: none !important;
+    opacity: 1 !important;
+    transform: translateY(-50%) !important;
+  }
+}

@@ -10,6 +10,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="css/style.css" />
   <link rel="stylesheet" href="css/home.css" />
+  <link rel="stylesheet" href="css/map.css" />
   <link rel="stylesheet" href="css/cookies.css" />
 </head>
 <body>
@@ -58,6 +59,11 @@
           <a href="services.html" class="btn btn-outline" data-i18n="home_hero_btn2">Meie teenused</a>
         </div>
       </div>
+      <!-- Canvas Globe -->
+      <div class="hero-map" aria-hidden="true">
+        <canvas id="globeCanvas"></canvas>
+      </div>
+
       <div class="hero__scroll" aria-hidden="true"><span></span></div>
     </section>
 
@@ -198,5 +204,6 @@
   <script src="js/translations.js"></script>
   <script src="js/main.js"></script>
   <script src="js/cookies.js"></script>
+  <script src="js/globe.js"></script>
 </body>
 </html>
