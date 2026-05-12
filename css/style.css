@@ -429,8 +429,16 @@ ul { list-style: none; }
   padding: 18px 0 22px;
   display: flex;
   flex-wrap: wrap;
-  gap: 12px 24px;
+  gap: 8px 24px;
   align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+@media (min-width: 640px) {
+  .footer__bottom {
+    justify-content: space-between;
+    text-align: left;
+  }
 }
 .footer__copy { font-size: .78rem; color: var(--text-subtle); }
 .footer__legal-link {
