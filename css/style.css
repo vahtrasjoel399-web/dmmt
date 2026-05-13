@@ -319,12 +319,12 @@ ul { list-style: none; }
   /* Push lang + CTA to bottom of drawer */
   .navbar__menu .lang-switcher {
     margin-top: auto;
-    background: rgba(255,255,255,.05);
-    border-color: rgba(255,255,255,.1);
+    background: rgba(255,255,255,.06);
+    border-color: rgba(255,255,255,.12);
     padding: 5px;
     align-self: flex-start;
   }
-  .navbar__menu .lang-btn { font-size: .78rem; padding: 8px 13px; }
+  .navbar__menu .lang-btn { font-size: .8rem; padding: 8px 14px; }
 
   .navbar__cta {
     width: 100%;
@@ -477,17 +477,6 @@ ul { list-style: none; }
 .lang-btn:hover { color: var(--text); background: rgba(255,255,255,.07); }
 .lang-btn.active { background: var(--accent); color: #fff; }
 
-/* Mobile: floating pill */
-@media (max-width: 768px) {
-  /* Inside mobile menu - make it bigger */
-  .navbar__menu .lang-switcher {
-    background: rgba(255,255,255,.06);
-    border-color: rgba(255,255,255,.12);
-    padding: 5px;
-    margin-top: 8px;
-  }
-  .navbar__menu .lang-btn { font-size: .8rem; padding: 8px 14px; }
-}
 
 /* ══════════════════════════════════
    ANIMATIONS
@@ -557,6 +546,40 @@ ul { list-style: none; }
    SELECTION
 ══════════════════════════════════ */
 ::selection { background: var(--accent); color: #fff; }
+
+/* ══════════════════════════════════
+   CTA BOX  (shared — home + services)
+══════════════════════════════════ */
+.cta-box {
+  position: relative;
+  background: var(--bg-card);
+  border: 1px solid var(--border-accent);
+  border-radius: 12px;
+  padding: 48px 28px;
+  text-align: center;
+  overflow: hidden;
+  transition: box-shadow .3s var(--ease);
+}
+.cta-box:hover { box-shadow: 0 0 60px rgba(255,42,42,.1); }
+.cta-box__glow {
+  position: absolute; top: -60%; left: 50%;
+  transform: translateX(-50%);
+  width: 500px; height: 260px;
+  background: radial-gradient(ellipse, rgba(255,42,42,.12) 0%, transparent 70%);
+  pointer-events: none;
+}
+.cta-box__title {
+  font-size: clamp(1.4rem, 3.5vw, 2.2rem);
+  font-weight: 700; margin-bottom: 16px;
+  max-width: 520px; margin-left: auto; margin-right: auto;
+}
+.cta-box__desc {
+  font-size: clamp(.875rem, 2vw, 1rem);
+  color: var(--text-muted); max-width: 440px;
+  margin: 0 auto 32px; line-height: 1.75;
+}
+@media (min-width: 640px) { .cta-box { padding: 64px 48px; } }
+@media (min-width: 900px)  { .cta-box { padding: 72px 64px; } }
 
 /* ══════════════════════════════════
    FOCUS RING (accessibility)

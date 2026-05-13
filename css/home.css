@@ -63,14 +63,6 @@
   }
 }
 
-.hero__network {
-  position: absolute;
-  inset: 0;
-  width: 100%;
-  height: 100%;
-  pointer-events: none;
-  user-select: none;
-}
 
 .hero__content {
   position: relative; z-index: 1;
@@ -228,26 +220,6 @@
 }
 .photo-grid__cell:hover::after { opacity: 0; }
 
-.value-pill {
-  background: var(--bg-card);
-  border: 1px solid var(--border);
-  border-radius: var(--radius-lg);
-  padding: 22px 24px;
-  font-size: .95rem; font-weight: 600;
-  color: var(--text-muted);
-  display: flex; align-items: center; gap: 18px;
-  transition: border-color .25s var(--ease), transform .3s var(--ease), color .25s var(--ease);
-  cursor: default;
-}
-.value-pill:hover {
-  border-color: var(--border-accent);
-  transform: translateX(8px);
-  color: var(--text);
-}
-.value-pill--accent { border-color: var(--border-accent); color: var(--text); }
-
-.value-pill__line { width: 3px; height: 26px; background: var(--text-subtle); border-radius: 2px; flex-shrink: 0; }
-.value-pill__line--accent { background: var(--accent); }
 
 /* ══════════════════════════════════
    SERVICES PREVIEW
@@ -309,40 +281,3 @@
 }
 .service-card__link:hover { gap: 10px; }
 
-/* ══════════════════════════════════
-   CTA BOX
-══════════════════════════════════ */
-.cta-box {
-  position: relative;
-  background: var(--bg-card);
-  border: 1px solid var(--border-accent);
-  border-radius: 12px;
-  padding: 48px 28px;
-  text-align: center;
-  overflow: hidden;
-  transition: box-shadow .3s var(--ease);
-}
-.cta-box:hover { box-shadow: 0 0 60px rgba(255,42,42,.1); }
-.cta-box__glow {
-  position: absolute; top: -50%; left: 50%;
-  transform: translateX(-50%);
-  width: 500px; height: 250px;
-  background: radial-gradient(ellipse, rgba(255,42,42,.12) 0%, transparent 70%);
-  pointer-events: none;
-}
-.cta-box__title {
-  font-size: clamp(1.4rem, 3.5vw, 2.2rem);
-  font-weight: 700;
-  margin-bottom: 16px;
-  max-width: 520px;
-  margin-left: auto; margin-right: auto;
-}
-.cta-box__desc {
-  font-size: clamp(.875rem, 2vw, 1rem);
-  color: var(--text-muted);
-  max-width: 440px;
-  margin: 0 auto 32px;
-  line-height: 1.75;
-}
-@media (min-width: 640px) { .cta-box { padding: 64px 48px; } }
-@media (min-width: 900px) { .cta-box { padding: 72px 64px; } }

@@ -143,34 +143,3 @@
 .svc__sep { height: 1px; background: var(--border); margin-top: 44px; }
 @media (min-width: 768px) { .svc__sep { margin-top: 56px; } }
 
-/* ── CTA box ── */
-.cta-box {
-  position: relative;
-  background: var(--bg-card);
-  border: 1px solid var(--border-accent);
-  border-radius: 12px;
-  padding: 48px 28px;
-  text-align: center;
-  overflow: hidden;
-  transition: box-shadow .3s var(--ease);
-}
-.cta-box:hover { box-shadow: 0 0 60px rgba(255,42,42,.1); }
-.cta-box__glow {
-  position: absolute; top: -60%; left: 50%;
-  transform: translateX(-50%);
-  width: 500px; height: 260px;
-  background: radial-gradient(ellipse, rgba(255,42,42,.12) 0%, transparent 70%);
-  pointer-events: none;
-}
-.cta-box__title {
-  font-size: clamp(1.4rem, 3.5vw, 2.2rem);
-  font-weight: 700; margin-bottom: 16px;
-  max-width: 520px; margin-left: auto; margin-right: auto;
-}
-.cta-box__desc {
-  font-size: clamp(.875rem, 2vw, 1rem);
-  color: var(--text-muted); max-width: 440px;
-  margin: 0 auto 32px; line-height: 1.75;
-}
-@media (min-width: 640px) { .cta-box { padding: 64px 48px; } }
-@media (min-width: 900px)  { .cta-box { padding: 72px 64px; } }
