@@ -1,40 +1,80 @@
-/* ── Hero Globe ─────────────────────────────────────────────── */
+/* ══════════════════════════════════════════════════════════════
+   HERO NETWORK OVERLAY — SVG element styles only
+   Positioning lives in home.css (.hero__globe / .hero__network)
+══════════════════════════════════════════════════════════════ */
 
-.hero-map {
-  display: none;
-  position: absolute;
-  right: 2%;
-  top: 50%;
-  transform: translateY(-50%);
-  width: 460px;
-  max-width: 48%;
-  pointer-events: none;
-  z-index: 0;
-  opacity: 0;
-  animation: mapIn 1.2s var(--ease) 0.3s both;
+/* ── Connection lines ───────────────────────────────────────── */
+.ml {
+  stroke: rgba(255,42,42,.42);
+  stroke-width: 1.5;
+  stroke-linecap: round;
+  fill: none;
+  filter: url(#fLine);
+  stroke-dasharray: 1;
+  stroke-dashoffset: 1;
+  animation: drawLine 1.5s cubic-bezier(.4,0,.2,1) var(--d,.9s) both;
 }
 
-@media (min-width: 1024px) {
-  .hero-map { display: block; }
+@keyframes drawLine {
+  from { stroke-dashoffset: 1; }
+  to   { stroke-dashoffset: 0; }
 }
 
-@keyframes mapIn {
-  from { opacity: 0; transform: translateY(-50%) translateX(24px); }
-  to   { opacity: 1; transform: translateY(-50%) translateX(0);    }
+/* ── Pulse ring ─────────────────────────────────────────────── */
+.np {
+  fill: rgba(255,42,42,.15);
+  transform-box: fill-box;
+  transform-origin: center;
+  animation:
+    nodeIn .55s cubic-bezier(.34,1.56,.64,1) var(--d,2s) both,
+    pulse  4s   ease-out                     var(--pd,2.5s) infinite;
+}
+.np--hq { fill: rgba(255,42,42,.22); }
+
+@keyframes nodeIn {
+  from { transform: scale(0); opacity: 0; }
+  to   { transform: scale(1); opacity: 1; }
+}
+@keyframes pulse {
+  0%   { transform: scale(1);   opacity: .5; }
+  100% { transform: scale(2.6); opacity: 0;  }
 }
 
-.hero-map canvas {
-  display: block;
-  width: 460px;
-  height: 460px;
-  max-width: 100%;
+/* ── Dot ────────────────────────────────────────────────────── */
+.nd {
+  fill: #ff3333;
+  transform-box: fill-box;
+  transform-origin: center;
+  animation: nodeIn .5s cubic-bezier(.34,1.56,.64,1) var(--d,2s) both;
+}
+.nd--hq { fill: #ff5555; }
+
+/* ── Label ──────────────────────────────────────────────────── */
+.nl {
+  font-family: 'Inter', sans-serif;
+  font-size: 20px;
+  font-weight: 500;
+  letter-spacing: .06em;
+  fill: rgba(255,255,255,.75);
+  dominant-baseline: middle;
+  animation: labelIn .4s ease var(--d,2.1s) both;
+}
+.nl--hq {
+  font-size: 23px;
+  font-weight: 600;
+  fill: #ffffff;
+}
+
+@keyframes labelIn {
+  from { opacity: 0; }
+  to   { opacity: 1; }
 }
 
 /* ── Reduced motion ─────────────────────────────────────────── */
 @media (prefers-reduced-motion: reduce) {
-  .hero-map {
-    animation: none !important;
-    opacity: 1 !important;
-    transform: translateY(-50%) !important;
-  }
+  .hero__globe,
+  .hero__network { animation: none !important; opacity: 1 !important; }
+  .ml            { animation: none !important; stroke-dashoffset: 0 !important; }
+  .np, .nd       { animation: none !important; opacity: 1 !important; transform: scale(1) !important; }
+  .nl            { animation: none !important; opacity: 1 !important; }
 }

@@ -45,7 +45,12 @@
       <div class="hero__bg" aria-hidden="true">
         <div class="hero__gradient"></div>
         <div class="hero__grid"></div>
+
+        <!-- Globe render: full hero atmosphere, not a side element -->
+        <img class="hero__globe" src="img/globe.png" alt="" width="1717" height="916" />
+
       </div>
+
       <div class="container hero__content">
         <p class="label fade-up" data-i18n="home_hero_label">Balti ja Skandinaavia turud</p>
         <h1 class="hero__title fade-up d1" data-i18n-html="home_hero_title">
@@ -58,10 +63,6 @@
           <a href="contact.html"  class="btn btn-primary" data-i18n="home_hero_btn1">Saa meie partneriks</a>
           <a href="services.html" class="btn btn-outline" data-i18n="home_hero_btn2">Meie teenused</a>
         </div>
-      </div>
-      <!-- Canvas Globe -->
-      <div class="hero-map" aria-hidden="true">
-        <canvas id="globeCanvas"></canvas>
       </div>
 
       <div class="hero__scroll" aria-hidden="true"><span></span></div>
@@ -79,11 +80,11 @@
           <span class="stat-card__label" data-i18n="stat_placements">Edukalt paigutatud</span>
         </div>
         <div class="stat-card">
-          <span class="stat-card__value">3</span>
+          <span class="stat-card__value">5</span>
           <span class="stat-card__label" data-i18n="stat_regions">Tururegiooni</span>
         </div>
         <div class="stat-card">
-          <span class="stat-card__value">98%</span>
+          <span class="stat-card__value">100%</span>
           <span class="stat-card__label" data-i18n="stat_retention">Klientide lojaalsus</span>
         </div>
       </div>
@@ -106,18 +107,18 @@
             Loe meist lähemalt
           </a>
         </div>
-        <div class="about-preview__visual" aria-hidden="true">
-          <div class="value-pill">
-            <div class="value-pill__line"></div>
-            <span data-i18n="home_pill1">Usaldusväärsus</span>
-          </div>
-          <div class="value-pill value-pill--accent">
-            <div class="value-pill__line value-pill__line--accent"></div>
-            <span data-i18n="home_pill2">Kogemus</span>
-          </div>
-          <div class="value-pill">
-            <div class="value-pill__line"></div>
-            <span data-i18n="home_pill3">Vastutus</span>
+        <div class="about-preview__visual">
+          <!-- Replace these with your own photos in img/ -->
+          <div class="photo-grid">
+            <div class="photo-grid__cell photo-grid__cell--tall">
+              <img src="img/photo-team.jpg" alt="Meeskond tööl" loading="lazy" />
+            </div>
+            <div class="photo-grid__cell">
+              <img src="img/photo-workplace.jpg" alt="Töökeskkond" loading="lazy" />
+            </div>
+            <div class="photo-grid__cell">
+              <img src="img/photo-transport.jpg" alt="Tööstuslik personal" loading="lazy" />
+            </div>
           </div>
         </div>
       </div>
@@ -204,6 +205,5 @@
   <script src="js/translations.js"></script>
   <script src="js/main.js"></script>
   <script src="js/cookies.js"></script>
-  <script src="js/globe.js"></script>
 </body>
 </html>

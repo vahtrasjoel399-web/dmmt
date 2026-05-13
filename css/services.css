@@ -1,8 +1,67 @@
 /* ══════════════════════════════════
    SERVICE BLOCKS  (mobile-first)
 ══════════════════════════════════ */
+/* ── Intro photo strip ── */
+.svc-strip {
+  display: none;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 8px;
+  height: 220px;
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  margin-bottom: 56px;
+}
+@media (min-width: 640px) { .svc-strip { display: grid; } }
+
+.svc-strip__cell {
+  background: var(--bg-3);
+  overflow: hidden;
+}
+.svc-strip__cell img {
+  width: 100%; height: 100%;
+  object-fit: cover;
+  display: block;
+  filter: brightness(0.82) saturate(0.72);
+  transition: transform .4s var(--ease), filter .35s var(--ease);
+}
+.svc-strip__cell:hover img {
+  transform: scale(1.05);
+  filter: brightness(0.95) saturate(0.88);
+}
+
+/* ── Service blocks ── */
 .svc { padding: 44px 0; }
 @media (min-width: 768px) { .svc { padding: 56px 0; } }
+
+/* Per-service photo */
+.svc__visual {
+  display: none;
+  height: 260px;
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  margin-bottom: 28px;
+  border: 1px solid var(--border);
+}
+@media (min-width: 768px) {
+  .svc__visual {
+    display: block;
+    padding-left: 44px; /* align with svc__body */
+    box-sizing: content-box;
+  }
+}
+@media (min-width: 1024px) { .svc__visual { height: 300px; } }
+
+.svc__visual img {
+  width: 100%; height: 100%;
+  object-fit: cover;
+  display: block;
+  filter: brightness(0.82) saturate(0.72);
+  transition: transform .5s var(--ease), filter .4s var(--ease);
+}
+.svc__visual:hover img {
+  transform: scale(1.03);
+  filter: brightness(0.92) saturate(0.85);
+}
 
 .svc__header {
   display: flex;

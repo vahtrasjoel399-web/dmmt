@@ -15,8 +15,19 @@
 .hero__gradient {
   position: absolute; inset: 0;
   background:
-    radial-gradient(ellipse 80% 60% at 60% 40%, rgba(255,42,42,.09) 0%, transparent 65%),
-    radial-gradient(ellipse 50% 80% at 95% 10%, rgba(255,42,42,.05) 0%, transparent 60%);
+    /* Dark curtain — keeps text legible over the globe atmosphere */
+    linear-gradient(to right,
+      rgba(11,11,11,1)    0%,
+      rgba(11,11,11,.95) 22%,
+      rgba(11,11,11,.72) 42%,
+      rgba(11,11,11,.20) 64%,
+      transparent        80%
+    ),
+    /* Top + bottom vignette */
+    linear-gradient(to bottom, rgba(11,11,11,.5) 0%, transparent 18%),
+    linear-gradient(to top,    rgba(11,11,11,.6) 0%, transparent 20%),
+    /* Subtle red atmospheric glow — globe region */
+    radial-gradient(ellipse 62% 60% at 72% 48%, rgba(255,42,42,.055) 0%, transparent 70%);
 }
 
 .hero__grid {
@@ -25,7 +36,40 @@
     linear-gradient(rgba(255,255,255,.022) 1px, transparent 1px),
     linear-gradient(90deg, rgba(255,255,255,.022) 1px, transparent 1px);
   background-size: 52px 52px;
-  mask-image: radial-gradient(ellipse 80% 80% at 50% 50%, black 20%, transparent 80%);
+  mask-image: radial-gradient(ellipse 90% 80% at 38% 50%, black 10%, transparent 75%);
+}
+
+/* ── Globe environment + network overlay ────────────────────── */
+.hero__globe {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: 62% center; /* keep globe visible at all widths */
+  pointer-events: none;
+  user-select: none;
+}
+/* On wide screens the default composition works perfectly */
+@media (min-width: 1280px) {
+  .hero__globe { object-position: center center; }
+}
+/* On mobile: darken more so text stays readable over the globe */
+@media (max-width: 767px) {
+  .hero__gradient {
+    background:
+      linear-gradient(rgba(11,11,11,.88), rgba(11,11,11,.80)),
+      radial-gradient(ellipse 100% 60% at 60% 50%, rgba(255,42,42,.05) 0%, transparent 70%);
+  }
+}
+
+.hero__network {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  user-select: none;
 }
 
 .hero__content {
@@ -146,8 +190,43 @@
   .about-preview { grid-template-columns: 1fr 1fr; gap: 72px; }
 }
 
-.about-preview__visual { display: none; flex-direction: column; gap: 14px; }
-@media (min-width: 900px) { .about-preview__visual { display: flex; } }
+.about-preview__visual { display: none; }
+@media (min-width: 900px) { .about-preview__visual { display: block; } }
+
+/* ── Photo grid — about preview ─────────────────────────────── */
+.photo-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 210px 155px;
+  gap: 8px;
+}
+.photo-grid__cell {
+  background: var(--bg-3);
+  border-radius: var(--radius);
+  overflow: hidden;
+  position: relative;
+}
+.photo-grid__cell img {
+  width: 100%; height: 100%;
+  object-fit: cover;
+  display: block;
+  filter: brightness(0.88) saturate(0.8);
+  transition: transform .45s var(--ease), filter .35s var(--ease);
+}
+.photo-grid__cell:hover img {
+  transform: scale(1.05);
+  filter: brightness(1) saturate(1);
+}
+.photo-grid__cell--tall { grid-row: span 2; }
+/* Dark tint overlay — matches site palette, fades on hover */
+.photo-grid__cell::after {
+  content: '';
+  position: absolute; inset: 0;
+  background: linear-gradient(135deg, rgba(11,11,11,.35) 0%, transparent 60%);
+  transition: opacity .35s var(--ease);
+  pointer-events: none;
+}
+.photo-grid__cell:hover::after { opacity: 0; }
 
 .value-pill {
   background: var(--bg-card);
