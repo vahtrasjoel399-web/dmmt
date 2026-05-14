@@ -63,7 +63,13 @@ const fadeEls = document.querySelectorAll('.fade-up');
 if ('IntersectionObserver' in window) {
   const io = new IntersectionObserver(entries => {
     entries.forEach(e => {
-      if (e.isIntersecting) { e.target.classList.add('visible'); io.unobserve(e.target); }
+      if (e.isIntersecting) {
+        e.target.classList.add('visible');
+        io.unobserve(e.target);
+        e.target.addEventListener('animationend', () => {
+          e.target.style.willChange = 'auto';
+        }, { once: true });
+      }
     });
   }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
   fadeEls.forEach(el => io.observe(el));

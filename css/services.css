@@ -30,7 +30,7 @@
 }
 
 /* ── Service blocks ── */
-.svc { padding: 44px 0; }
+.svc { padding: 44px 0; scroll-margin-top: 80px; }
 @media (min-width: 768px) { .svc { padding: 56px 0; } }
 
 /* Per-service photo */

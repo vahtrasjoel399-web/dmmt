@@ -204,6 +204,7 @@
   display: block;
   filter: brightness(0.88) saturate(0.8);
   transition: transform .45s var(--ease), filter .35s var(--ease);
+  will-change: transform, filter;
 }
 .photo-grid__cell:hover img {
   transform: scale(1.05);
@@ -255,6 +256,7 @@
   transition: border-color .25s var(--ease), transform .28s var(--ease), box-shadow .28s var(--ease);
   position: relative;
   overflow: hidden;
+  will-change: transform;
 }
 .service-card::after {
   content: '';
@@ -262,6 +264,7 @@
   background: radial-gradient(circle at 50% 0, rgba(255,42,42,.06), transparent 60%);
   opacity: 0;
   transition: opacity .3s var(--ease);
+  pointer-events: none;
 }
 .service-card:hover {
   border-color: var(--border-accent);

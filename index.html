@@ -7,7 +7,8 @@
   <title>DMMT STAFF</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@300..700&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&family=Space+Grotesk:wght@400;700&display=swap" rel="stylesheet" />
+  <link rel="preload" href="img/globe.png" as="image" fetchpriority="high" />
   <link rel="stylesheet" href="css/style.css" />
   <link rel="stylesheet" href="css/home.css" />
   <link rel="stylesheet" href="css/map.css" />
@@ -47,7 +48,7 @@
         <div class="hero__grid"></div>
 
         <!-- Globe render: full hero atmosphere, not a side element -->
-        <img class="hero__globe" src="img/globe.png" alt="" width="1717" height="916" />
+        <img class="hero__globe" src="img/globe.png" alt="" width="1717" height="916" fetchpriority="high" decoding="async" />
 
       </div>
 
@@ -111,13 +112,13 @@
           <!-- Replace these with your own photos in img/ -->
           <div class="photo-grid">
             <div class="photo-grid__cell photo-grid__cell--tall">
-              <img src="img/photo-team.jpg" alt="Meeskond tööl" loading="lazy" />
+              <img src="img/photo-team.webp" alt="Meeskond tööl" loading="lazy" decoding="async" />
             </div>
             <div class="photo-grid__cell">
-              <img src="img/photo-workplace.jpg" alt="Töökeskkond" loading="lazy" />
+              <img src="img/photo-workplace.webp" alt="Töökeskkond" loading="lazy" decoding="async" />
             </div>
             <div class="photo-grid__cell">
-              <img src="img/photo-transport.jpg" alt="Tööstuslik personal" loading="lazy" />
+              <img src="img/photo-transport.webp" alt="Tööstuslik personal" loading="lazy" decoding="async" />
             </div>
           </div>
         </div>

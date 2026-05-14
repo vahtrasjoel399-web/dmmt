@@ -145,8 +145,8 @@ ul { list-style: none; }
   inset: 0;
   z-index: -1;
   background: rgba(11,11,11,.85);
-  backdrop-filter: blur(16px) saturate(180%);
-  -webkit-backdrop-filter: blur(16px) saturate(180%);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
   transition: background .3s var(--ease), box-shadow .3s var(--ease);
 }
 .navbar.scrolled {
@@ -502,7 +502,11 @@ ul { list-style: none; }
   50%       { transform: translateY(-6px); }
 }
 
-.fade-up { opacity: 0; }
+.fade-up {
+  opacity: 0;
+  transform: translateY(28px);
+  will-change: transform, opacity;
+}
 .fade-up.visible {
   animation: fadeUp .6s var(--ease) both;
 }
