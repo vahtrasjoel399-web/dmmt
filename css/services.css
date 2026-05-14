@@ -41,6 +41,8 @@
   overflow: hidden;
   margin-bottom: 28px;
   border: 1px solid var(--border);
+  background: #1a1a1a;
+  contain: layout style paint;
 }
 @media (min-width: 768px) {
   .svc__visual {

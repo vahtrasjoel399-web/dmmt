@@ -197,6 +197,7 @@
   border-radius: var(--radius);
   overflow: hidden;
   position: relative;
+  contain: layout style paint;
 }
 .photo-grid__cell img {
   width: 100%; height: 100%;

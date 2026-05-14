@@ -7,12 +7,13 @@
   <title>DMMT STAFF</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&family=Space+Grotesk:wght@400;700&display=swap" rel="stylesheet" />
-  <link rel="preload" href="img/globe.png" as="image" fetchpriority="high" />
+  <link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&family=Space+Grotesk:wght@400;700&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'" />
+  <noscript><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&family=Space+Grotesk:wght@400;700&display=swap" rel="stylesheet" /></noscript>
+  <link rel="preload" href="img/globe.webp" as="image" fetchpriority="high" />
   <link rel="stylesheet" href="css/style.css" />
   <link rel="stylesheet" href="css/home.css" />
-  <link rel="stylesheet" href="css/map.css" />
-  <link rel="stylesheet" href="css/cookies.css" />
+  <link rel="stylesheet" href="css/map.css" media="print" onload="this.media='all'" />
+  <link rel="stylesheet" href="css/cookies.css" media="print" onload="this.media='all'" />
 </head>
 <body>
 
@@ -48,7 +49,7 @@
         <div class="hero__grid"></div>
 
         <!-- Globe render: full hero atmosphere, not a side element -->
-        <img class="hero__globe" src="img/globe.png" alt="" width="1717" height="916" fetchpriority="high" decoding="async" />
+        <img class="hero__globe" src="img/globe.webp" alt="" width="1717" height="916" fetchpriority="high" decoding="async" />
 
       </div>
 

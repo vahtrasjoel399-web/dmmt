@@ -144,10 +144,15 @@ ul { list-style: none; }
   position: absolute;
   inset: 0;
   z-index: -1;
-  background: rgba(11,11,11,.85);
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
+  background: rgba(11,11,11,.92);
   transition: background .3s var(--ease), box-shadow .3s var(--ease);
+}
+@media (min-width: 769px) {
+  .navbar::before {
+    background: rgba(11,11,11,.85);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+  }
 }
 .navbar.scrolled {
   border-bottom-color: var(--border);
