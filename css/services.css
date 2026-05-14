@@ -47,8 +47,7 @@
 @media (min-width: 768px) {
   .svc__visual {
     display: block;
-    padding-left: 44px; /* align with svc__body */
-    box-sizing: content-box;
+    margin-left: 44px;
   }
 }
 @media (min-width: 1024px) { .svc__visual { height: 300px; } }
